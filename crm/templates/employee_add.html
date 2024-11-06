@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+{%load static%}
+{%block main_block%}
+<div class="container">
+    <form action="" method="post" enctype="multipart/form-data" class="border border-2 p-3 shadow rounded" >
+    <img src="{%static 'images/addemp.png'%}" alt="" width="150px" height="200px" class="rounded">
+    <h2 class="text-center my-2 fw-bold">Add An Employee</h2>
+        {%csrf_token%}
+        {%for f in form%}
+            <div class="form-floating">
+                {{f.label_tag}}
+                {{f}}
+            </div>
+        {%endfor%}
+        <button type="submit" class="btn btn-primary">Add</button>
+    </form>
+</div>
+{%endblock%}
