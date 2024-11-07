@@ -28,7 +28,7 @@ urlpatterns = [
     path("employee/<int:pk>/remove",views.EmployeeDeleteView.as_view(),name="employee-delete"),
     path("employee/<int:pk>/change",views.EmployeeUpdateView.as_view(),name="employee-update"),
     path("register/",views.SignUpView.as_view(),name="register"),
-    path("signin/",views.SignInView.as_view(),name="signin"),
+    path("",views.SignInView.as_view(),name="signin"),
     path("signout/",views.SignOutView.as_view(),name="signout"),
 
 
